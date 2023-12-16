@@ -29,12 +29,14 @@ function runQuery() {
                     return;
                 }
                 console.log("List of people whose birthday is today.\n",result);
+                conn.end();
+                console.log("Database connection closed !");
                 
                 
                 resolve(result); // Resolve with the result
             });
-            conn.end();
-            console.log("Database connection closed !");
+            
+            
 
         });
     });
