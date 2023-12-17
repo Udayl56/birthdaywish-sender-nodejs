@@ -22,7 +22,7 @@ function runQuery() {
             }
             console.log('Connected to MySQL database\n');
 
-            conn.query("SELECT name, email FROM myfrienddateofdirth WHERE DATE_FORMAT(dateofbirth, '%m-%d') = DATE_FORMAT(CURDATE(), '%m-%d')", function (err, result, fields) {
+            conn.query("SELECT Name, Email FROM myFriendDateofDirth WHERE DATE_FORMAT(dateOfBirth, '%m-%d') = DATE_FORMAT(CURDATE(), '%m-%d')", function (err, result, fields) {
                 if (err) {
                     console.error('Error fetching data from database:\n', err);
                     reject(err);
